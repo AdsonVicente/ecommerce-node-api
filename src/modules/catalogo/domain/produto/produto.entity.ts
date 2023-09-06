@@ -1,4 +1,4 @@
-import { Entity } from "../../../../shared/domain/entity";
+import { Entity } from "@shared/domain/entity";
 import { ProdutoMap } from "../../mappers/produto.map";
 import { Categoria } from "../categoria/categoria.entity";
 import { DescricaoProdutoTamanhoMaximoInvalido, DescricaoProdutoTamanhomMinimoInvalido, NomeProdutoTamanhoMaximoInvalido, NomeProdutoTamanhoMinimoInvalido, QtdMaximaCategoriasProdutoInvalida, QtdMinimaCategoriaProdutoInvalida, ValorMinimoProdutoInvalido } from "./produto.exception";

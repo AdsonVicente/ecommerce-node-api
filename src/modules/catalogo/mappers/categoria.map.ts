@@ -18,3 +18,4 @@ class CategoriaMap {
 }
 
 export { CategoriaMap };
+

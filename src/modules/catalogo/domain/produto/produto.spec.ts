@@ -1,7 +1,7 @@
+import { faker } from "@faker-js/faker";
 import { beforeAll, describe, expect, test } from "vitest";
 import { Categoria } from "../categoria/categoria.entity";
 import { Produto } from "./produto.entity";
-import { faker } from "@faker-js/faker";
 import {
     DescricaoProdutoTamanhoMaximoInvalido,
     DescricaoProdutoTamanhomMinimoInvalido,
