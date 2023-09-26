@@ -11,24 +11,35 @@ datasource db {
 }
 
 model Categoria {
-  id               String    @id @db.Uuid
-  nome             String    @db.VarChar(50)
-  data_criacao     DateTime  @default(now()) @map("data_criacao")
-  data_atualizacao DateTime  @updatedAt @map("data_atualizacao")
-  produtos         Produto[]
+  id               String               @id @db.Uuid
+  nome             String               @db.VarChar(50)
+  data_criacao     DateTime             @default(now()) @map("data_criacao")
+  data_atualizacao DateTime             @updatedAt @map("data_atualizacao")
+  produtos         CategoriasProdutos[]
 
   @@map("categorias")
 }
 
-model Produto {
-  id               String     @id @db.Uuid
-  nome             String     @db.VarChar(50)
-  descricao        String     @db.VarChar(200)
-  valor            Int
-  data_criacao     DateTime   @default(now()) @map("data_criacao")
-  data_atualizacao DateTime   @updatedAt @map("data_atualizacao")
-  categorias       Categoria[]
+model CategoriasProdutos {
+  produto         Produto   @relation(fields: [produtoID], references: [id])
+  produtoID       String    @map("produto_id") @db.Uuid
+  categoria       Categoria @relation(fields: [categoriaId], references: [id])
+  categoriaId     String    @map("categoria_id") @db.Uuid
+  dataCriacao     DateTime  @default(now()) @map("data_criacao")
+  dataAtualizacao DateTime  @updatedAt @map("data_atualizacao")
 
-@@map("produtos")
-  
+  @@id([produtoID, categoriaId])
+  @@map("produtos_categorias")
+}
+
+model Produto {
+  id               String               @id @db.Uuid
+  nome             String               @db.VarChar(50)
+  descricao        String               @db.VarChar(200)
+  valor            Int
+  data_criacao     DateTime             @default(now()) @map("data_criacao")
+  data_atualizacao DateTime             @updatedAt @map("data_atualizacao")
+  categorias       CategoriasProdutos[]
+
+  @@map("produtos")
 }
