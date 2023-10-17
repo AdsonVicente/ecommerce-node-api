@@ -24,6 +24,9 @@ class ProdutoPrismaRepository extends PrismaRepository implements IProdutoReposi
     async recuperarTodos(): Promise<Array<Produto>> {
 
         const produtosRecuperados = await this._datasource.produto.findMany({
+            where: {
+                dataExclusao: null,
+            },
             include: produtoIncludeCategoriaPrisma
         });
 
@@ -83,10 +86,12 @@ class ProdutoPrismaRepository extends PrismaRepository implements IProdutoReposi
                 },
                 data: {
                     dataExclusao: new Date()
-                }      
+                }
             }
         );
-        if (produtoDeletado.id) {return true;}
+        if (produtoDeletado.id) { return true; }
         return false;
     }
 }
+
+export { ProdutoPrismaRepository }

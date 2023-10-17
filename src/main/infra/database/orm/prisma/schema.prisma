@@ -13,8 +13,8 @@ datasource db {
 model Categoria {
   id               String               @id @db.Uuid
   nome             String               @db.VarChar(50)
-  data_criacao     DateTime             @default(now()) @map("data_criacao")
-  data_atualizacao DateTime             @updatedAt @map("data_atualizacao")
+  dataCriacao     DateTime             @default(now()) @map("data_criacao")
+  dataAtualizacao DateTime             @updatedAt @map("data_atualizacao")
   produtos         ProdutosCategorias[]
 
   @@map("categorias")

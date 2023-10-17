@@ -1,6 +1,7 @@
 import { Categoria } from '@modules/catalogo/domain/categoria/categoria.entity';
 import { Produto } from '@modules/catalogo/domain/produto/produto.entity';
 import { CategoriaPrismaRepository } from '@modules/catalogo/infra/database/categoria.prisma.repository';
+import { ProdutoPrismaRepository } from '@modules/catalogo/infra/database/produto.prisma.repository';
 import { PrismaClient } from '@prisma/client';
 import { DomainException } from '@shared/domain/domain.exception';
 
@@ -24,9 +25,9 @@ async function main() {
     //Recuperar Categoria por UUID//
     ////////////////////////////////
     
-    const categoriaRecuperada: Categoria | null = await categoriaRepo.recuperarPorUuid("7061d559-ab25-4182-98ce-170afdf2acd2");
+    // const categoriaRecuperada: Categoria | null = await categoriaRepo.recuperarPorUuid("7061d559-ab25-4182-98ce-170afdf2acd2");
 
-    console.log(categoriaRecuperada);
+    // console.log(categoriaRecuperada);
 
     /////////////////////////////////
     //Recuperar Todas as Categorias//
@@ -83,34 +84,47 @@ async function main() {
     //Recuperar Produto por UUID//
     ////////////////////////////////
    
-    const produtoRecuperado: Produto | null = await produtoRepo.recuperarPorUuid("33663685-283d-4a52-b86e-7463e7077b38");
+    // const produtoRecuperado: Produto | null = await produtoRepo.recuperarPorUuid("33663685-283d-4a52-b86e-7463e7077b38");
 
-    console.log(produtoRecuperado);
+    // console.log(produtoRecuperado);
 
     ///////////////////
     //Inserir Produto//
     ///////////////////
 
-    const categoria01: Categoria = Categoria.recuperar({
-        id: "33663685-283d-4a52-b86e-7463e7077b38",
-        nome: 'Sala'
-    });    
+    // const categoria01: Categoria = Categoria.recuperar({
+    //     id: "c3d5de0a-15a6-47b6-a1be-e20a1123ef53",
+    //     nome: 'Sala'
+    // });    
 
-    const categoria02: Categoria = Categoria.recuperar({
-        id: "33663685-283d-4a52-b86e-7463e7077b38",
-        nome: 'Banho'
-    });
+    // const categoria02: Categoria = Categoria.recuperar({
+    //     id: "33663685-283d-4a52-b86e-7463e7077b38",
+    //     nome: 'Banho'
+    // });
 
-    const produto: Produto = Produto.criar({
-        nome:'Toalha de mesa',
-        descricao:'toalha de algodão',
-        valor:40,
-        categorias:[categoria01,categoria02]
-     });
+    // const produto: Produto = Produto.criar({
+    //     nome:'Toalha de mesa',
+    //     descricao:'toalha de algodão',
+    //     valor:40,
+    //     categorias:[categoria01,categoria02]
+    //  });
 
-    const produtoInserido = await produtoRepo.inserir(produto);
+    // const produtoInserido = await produtoRepo.inserir(produto);
 
-    console.log(produtoInserido);
+    // console.log(produtoInserido);
+
+
+
+
+                /////////Deletar Produto//////// 
+        //  const produtoDeletado : boolean = await produtoRepo.deletar ('9a9a4631-124c-4c4c-9f24-7bd0d3a4d81c')
+        //  console.log(produtoDeletado);
+
+        /////Recuperar produto///
+
+        // const todosProdutos: Array<Produto> = await produtoRepo.recuperarTodos();
+
+        // console.log(todosProdutos);
 
 }
 

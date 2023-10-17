@@ -1,15 +1,16 @@
+import { IDatasControle } from "@shared/domain/datas.types";
+
 // Todos os atributos/propriedades que uma categoria deve ter no sistema
 // Auxilia na criação de invariantes e modelos ricos
-
-import { type } from "os";
-
-interface ICategoria {
+interface ICategoria extends IDatasControle {
     id?: string;
     nome: string;
 }
 
-type CriarCategoriaProps = Omit<ICategoria, "id">;
+type CriarCategoriaProps = Omit<ICategoria, "id | keysDatasControle">;
 
-type RecuperarCategoriaProps = Required<ICategoria>
+type RecuperarCategoriaProps = ICategoria & {
+    id: NonNullable<ICategoria["id"]>
+}
 
-export { ICategoria, CriarCategoriaProps,RecuperarCategoriaProps };
+export { ICategoria, CriarCategoriaProps, RecuperarCategoriaProps };
