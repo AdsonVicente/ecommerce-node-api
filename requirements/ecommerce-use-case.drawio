@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="hXa-8S2XzWI_piD0tFBu" name="Visão Geral - Dominio">
-        <mxGraphModel dx="826" dy="619" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="698" dy="507" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -65,7 +65,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="UX1wETH_r1AoGowfUC1b" name="Subdominio - Catalogo">
-        <mxGraphModel dx="959" dy="899" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="733" dy="532" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -82,16 +82,16 @@
                     <mxGeometry x="200" y="240" width="140" height="70" as="geometry"/>
                 </mxCell>
                 <mxCell id="QvfsDt-sqGpOydoDML_0-3" value="Criar Produto" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="410" y="80" width="140" height="70" as="geometry"/>
+                    <mxGeometry x="410" y="100" width="140" height="50" as="geometry"/>
                 </mxCell>
                 <mxCell id="QvfsDt-sqGpOydoDML_0-4" value="Atualizar Produto" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="450" y="300" width="140" height="70" as="geometry"/>
+                    <mxGeometry x="417.5" y="220" width="140" height="50" as="geometry"/>
                 </mxCell>
                 <mxCell id="QvfsDt-sqGpOydoDML_0-5" value="Deletar Produto" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="410" y="390" width="140" height="70" as="geometry"/>
+                    <mxGeometry x="417.5" y="275" width="140" height="45" as="geometry"/>
                 </mxCell>
                 <mxCell id="QvfsDt-sqGpOydoDML_0-6" value="Recuperar Produto" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="450" y="190" width="140" height="70" as="geometry"/>
+                    <mxGeometry x="410" y="160" width="140" height="50" as="geometry"/>
                 </mxCell>
                 <mxCell id="QvfsDt-sqGpOydoDML_0-7" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;exitX=0.058;exitY=0.778;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="QvfsDt-sqGpOydoDML_0-3" target="QvfsDt-sqGpOydoDML_0-1" edge="1">
                     <mxGeometry width="160" relative="1" as="geometry">
@@ -120,21 +120,21 @@
                         <Array as="points"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="QvfsDt-sqGpOydoDML_0-14" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.981;entryY=0.38;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=block;endFill=1;" parent="1" target="QvfsDt-sqGpOydoDML_0-6" edge="1">
+                <mxCell id="QvfsDt-sqGpOydoDML_0-14" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.981;entryY=0.38;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=block;endFill=1;" parent="1" target="QvfsDt-sqGpOydoDML_0-6" edge="1" source="QvfsDt-sqGpOydoDML_0-12">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="640" y="220" as="sourcePoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="QvfsDt-sqGpOydoDML_0-15" style="edgeStyle=none;html=1;endArrow=block;endFill=1;" parent="1" target="QvfsDt-sqGpOydoDML_0-6" edge="1">
+                <mxCell id="QvfsDt-sqGpOydoDML_0-15" style="edgeStyle=none;html=1;endArrow=block;endFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" target="QvfsDt-sqGpOydoDML_0-6" edge="1" source="QvfsDt-sqGpOydoDML_0-13">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="664.3233805248137" y="308.4780919176337" as="sourcePoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="QvfsDt-sqGpOydoDML_0-12" value="Recuperar Produto por ID" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="630" y="180" width="140" height="70" as="geometry"/>
+                    <mxGeometry x="580" y="140" width="140" height="50" as="geometry"/>
                 </mxCell>
                 <mxCell id="QvfsDt-sqGpOydoDML_0-13" value="Recuperar&amp;nbsp; Produto por Filtro&amp;nbsp;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="640" y="280" width="140" height="70" as="geometry"/>
+                    <mxGeometry x="580" y="210" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="QvfsDt-sqGpOydoDML_0-51" style="edgeStyle=none;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;endArrow=none;endFill=0;" parent="1" source="QvfsDt-sqGpOydoDML_0-52" target="QvfsDt-sqGpOydoDML_0-53" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
@@ -146,16 +146,16 @@
                     <mxGeometry x="210" y="855.54" width="140" height="70" as="geometry"/>
                 </mxCell>
                 <mxCell id="QvfsDt-sqGpOydoDML_0-54" value="Criar Categoria" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="425" y="700" width="140" height="70" as="geometry"/>
+                    <mxGeometry x="425" y="720" width="125" height="50" as="geometry"/>
                 </mxCell>
                 <mxCell id="QvfsDt-sqGpOydoDML_0-55" value="Atualizar Categoria" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="460" y="915.54" width="140" height="70" as="geometry"/>
+                    <mxGeometry x="417.5" y="840" width="140" height="45.54" as="geometry"/>
                 </mxCell>
                 <mxCell id="QvfsDt-sqGpOydoDML_0-56" value="Deletar Categoria" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="440" y="1000" width="140" height="70" as="geometry"/>
+                    <mxGeometry x="417.5" y="895" width="140" height="50" as="geometry"/>
                 </mxCell>
                 <mxCell id="QvfsDt-sqGpOydoDML_0-57" value="Recuperar Categoria" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="460" y="805.54" width="140" height="70" as="geometry"/>
+                    <mxGeometry x="417.5" y="784.46" width="140" height="45.54" as="geometry"/>
                 </mxCell>
                 <mxCell id="QvfsDt-sqGpOydoDML_0-58" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;" parent="1" target="QvfsDt-sqGpOydoDML_0-53" edge="1">
                     <mxGeometry width="160" relative="1" as="geometry">
@@ -177,7 +177,7 @@
                         <mxPoint x="550" y="975.54" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="QvfsDt-sqGpOydoDML_0-61" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;entryX=1;entryY=1;entryDx=0;entryDy=0;" parent="1" target="QvfsDt-sqGpOydoDML_0-53" edge="1">
+                <mxCell id="QvfsDt-sqGpOydoDML_0-61" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;entryX=1;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="QvfsDt-sqGpOydoDML_0-56" target="QvfsDt-sqGpOydoDML_0-53" edge="1">
                     <mxGeometry width="160" relative="1" as="geometry">
                         <mxPoint x="452.44231275250604" y="1011.0043430383789" as="sourcePoint"/>
                         <mxPoint x="560" y="1065.54" as="targetPoint"/>
@@ -189,19 +189,19 @@
                         <mxPoint x="660" y="800" as="sourcePoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="QvfsDt-sqGpOydoDML_0-63" style="edgeStyle=none;html=1;endArrow=block;endFill=1;" parent="1" target="QvfsDt-sqGpOydoDML_0-57" edge="1">
+                <mxCell id="QvfsDt-sqGpOydoDML_0-63" style="edgeStyle=none;html=1;endArrow=block;endFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="QvfsDt-sqGpOydoDML_0-65" target="QvfsDt-sqGpOydoDML_0-57" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="674.3233805248137" y="924.0180919176337" as="sourcePoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="QvfsDt-sqGpOydoDML_0-64" value="Recuperar Categoria por ID" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="650" y="760" width="140" height="70" as="geometry"/>
+                    <mxGeometry x="580" y="760" width="140" height="70" as="geometry"/>
                 </mxCell>
                 <mxCell id="QvfsDt-sqGpOydoDML_0-65" value="RecuperarCategoria&amp;nbsp;&lt;br&gt;por Filtro" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="670" y="890" width="140" height="70" as="geometry"/>
+                    <mxGeometry x="580" y="840" width="140" height="70" as="geometry"/>
                 </mxCell>
                 <mxCell id="QvfsDt-sqGpOydoDML_0-72" value="Adicionar Categoria" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="400" y="480" width="140" height="70" as="geometry"/>
+                    <mxGeometry x="417.5" y="330" width="140" height="50" as="geometry"/>
                 </mxCell>
                 <mxCell id="QvfsDt-sqGpOydoDML_0-73" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;" parent="1" source="QvfsDt-sqGpOydoDML_0-72" target="QvfsDt-sqGpOydoDML_0-1" edge="1">
                     <mxGeometry width="160" relative="1" as="geometry">

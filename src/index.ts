@@ -12,7 +12,7 @@ const prisma = new PrismaClient({
 });
 
 async function main() {
-    
+
     prisma.$connect().then(
         async () => {
             console.log('Postgres Conectado');
@@ -24,7 +24,7 @@ async function main() {
     ////////////////////////////////
     //Recuperar Categoria por UUID//
     ////////////////////////////////
-    
+
     // const categoriaRecuperada: Categoria | null = await categoriaRepo.recuperarPorUuid("7061d559-ab25-4182-98ce-170afdf2acd2");
 
     // console.log(categoriaRecuperada);
@@ -32,7 +32,7 @@ async function main() {
     /////////////////////////////////
     //Recuperar Todas as Categorias//
     /////////////////////////////////
-    
+
     //const todasCategorias: Array<Categoria> = await categoriaRepo.recuperarTodos();
 
     //console.log(todasCategorias);
@@ -40,7 +40,7 @@ async function main() {
     ////////////////////////////////
     //Verifica se Existe Categoria//
     ////////////////////////////////
-    
+
     //const existeCategoria: boolean = await categoriaRepo.existe("7061d559-ab25-4182-98ce-170afdf2acd2");
 
     //console.log(existeCategoria);
@@ -48,7 +48,7 @@ async function main() {
     /////////////////////
     //Inserir Categoria//
     /////////////////////
-    
+
     //const categoria: Categoria = Categoria.criar({
     //    nome:'Sala e Quarto'
     //});     
@@ -60,7 +60,7 @@ async function main() {
     ///////////////////////
     //Atualizar Categoria//
     ///////////////////////
-    
+
     //const categoria: Categoria = Categoria.recuperar({
     //    id: "96a7f212-e01d-4de7-8abc-70cabbc898fd",
     //    nome: "Banho"
@@ -73,17 +73,17 @@ async function main() {
     /////////////////////
     //Deletar Categoria//
     /////////////////////
-    
+
     //const categoriaDeletada: boolean = await categoriaRepo.deletar("120a3d76-9ca6-4880-a1d6-d34685e1f6f8");
-    
+
     //console.log(categoriaDeletada);
 
-    const produtoRepo =  new ProdutoPrismaRepository(prisma);
+    const produtoRepo = new ProdutoPrismaRepository(prisma);
 
- ////////////////////////////////
+    ////////////////////////////////
     //Recuperar Produto por UUID//
     ////////////////////////////////
-   
+
     // const produtoRecuperado: Produto | null = await produtoRepo.recuperarPorUuid("33663685-283d-4a52-b86e-7463e7077b38");
 
     // console.log(produtoRecuperado);
@@ -116,15 +116,15 @@ async function main() {
 
 
 
-                /////////Deletar Produto//////// 
-        //  const produtoDeletado : boolean = await produtoRepo.deletar ('9a9a4631-124c-4c4c-9f24-7bd0d3a4d81c')
-        //  console.log(produtoDeletado);
+    /////////Deletar Produto//////// 
+    //  const produtoDeletado : boolean = await produtoRepo.deletar ('9a9a4631-124c-4c4c-9f24-7bd0d3a4d81c')
+    //  console.log(produtoDeletado);
 
-        /////Recuperar produto///
+    /////Recuperar produto///
 
-        // const todosProdutos: Array<Produto> = await produtoRepo.recuperarTodos();
+    // const todosProdutos: Array<Produto> = await produtoRepo.recuperarTodos();
 
-        // console.log(todosProdutos);
+    // console.log(todosProdutos);
 
 }
 
@@ -133,14 +133,14 @@ main()
         await prisma.$disconnect()
     })
     .catch(async (error) => {
-       if (error instanceof DomainException) {
-           console.log('Execeção de Dóminio');
-           console.log(error.message);
-       }
-       else {
-           console.log('Outras Exceções');
-           console.log(error.message);
-       }
-       await prisma.$disconnect()
-       process.exit(1)
-   })
+        if (error instanceof DomainException) {
+            console.log('Execeção de Dóminio');
+            console.log(error.message);
+        }
+        else {
+            console.log('Outras Exceções');
+            console.log(error.message);
+        }
+        await prisma.$disconnect()
+        process.exit(1)
+    })

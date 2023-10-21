@@ -23,7 +23,7 @@ class ProdutoMap {
         return Produto.recuperar(produto);
     }
 
-    public static fromPrismaModelToDomains(produto: ProdutoComCategoriaPrisma): Produto {
+    public static fromPrismaModelToDomain(produto: ProdutoComCategoriaPrisma): Produto {
 
         const categorias: Array<Categoria> = [];
 
