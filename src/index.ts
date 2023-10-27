@@ -2,15 +2,10 @@ import { Categoria } from '@modules/catalogo/domain/categoria/categoria.entity';
 import { Produto } from '@modules/catalogo/domain/produto/produto.entity';
 import { CategoriaPrismaRepository } from '@modules/catalogo/infra/database/categoria.prisma.repository';
 import { ProdutoPrismaRepository } from '@modules/catalogo/infra/database/produto.prisma.repository';
-import { PrismaClient } from '@prisma/client';
 import { DomainException } from '@shared/domain/domain.exception';
-
-
-const prisma = new PrismaClient({
-    log: ['query', 'info'],
-    errorFormat: 'pretty'
-});
-
+import { prisma } from '@main/infra/database/orm/prisma/client';
+import { categoriaRepositorio as categoriaRepo } from '@modules/catalogo/infra/database';
+import { produtoRepositorio as produtoRepo } from '@modules/catalogo/infra/database';
 async function main() {
 
     prisma.$connect().then(
@@ -19,23 +14,21 @@ async function main() {
         }
     );
 
-    const categoriaRepo = new CategoriaPrismaRepository(prisma);
-
     ////////////////////////////////
     //Recuperar Categoria por UUID//
     ////////////////////////////////
 
-    // const categoriaRecuperada: Categoria | null = await categoriaRepo.recuperarPorUuid("7061d559-ab25-4182-98ce-170afdf2acd2");
+    //const categoriaRecuperada: Categoria | null = await categoriaRepo.recuperarPorUuid('5ccdd6ab-d043-42f0-937b-1260fe47886a');
 
-    // console.log(categoriaRecuperada);
+    //console.log(categoriaRecuperada);
 
     /////////////////////////////////
     //Recuperar Todas as Categorias//
     /////////////////////////////////
 
-    //const todasCategorias: Array<Categoria> = await categoriaRepo.recuperarTodos();
+    // const todasCategorias: Array<Categoria> = await categoriaRepo.recuperarTodos();
 
-    //console.log(todasCategorias);
+    // console.log(todasCategorias);
 
     ////////////////////////////////
     //Verifica se Existe Categoria//
@@ -49,21 +42,21 @@ async function main() {
     //Inserir Categoria//
     /////////////////////
 
-    //const categoria: Categoria = Categoria.criar({
-    //    nome:'Sala e Quarto'
-    //});     
+    // const categoria: Categoria = Categoria.criar({
+    //    nome:'Cama'
+    // });     
 
-    //const categoriaInserida = await categoriaRepo.inserir(categoria);
+    // const categoriaInserida = await categoriaRepo.inserir(categoria);
 
-    //console.log(categoriaInserida);
+    // console.log(categoriaInserida);
 
     ///////////////////////
     //Atualizar Categoria//
     ///////////////////////
 
     //const categoria: Categoria = Categoria.recuperar({
-    //    id: "96a7f212-e01d-4de7-8abc-70cabbc898fd",
-    //    nome: "Banho"
+    //    id: "5ccdd6ab-d043-42f0-937b-1260fe47886a",
+    //    nome: "Cozinha Americana"
     //});     
 
     //const atualizouCategoria: boolean = await categoriaRepo.atualizar(categoria.id,categoria);
@@ -74,57 +67,78 @@ async function main() {
     //Deletar Categoria//
     /////////////////////
 
-    //const categoriaDeletada: boolean = await categoriaRepo.deletar("120a3d76-9ca6-4880-a1d6-d34685e1f6f8");
+    //const categoriaDeletada: boolean = await categoriaRepo.deletar('5ccdd6ab-d043-42f0-937b-1260fe47886a');
 
     //console.log(categoriaDeletada);
-
-    const produtoRepo = new ProdutoPrismaRepository(prisma);
 
     ////////////////////////////////
     //Recuperar Produto por UUID//
     ////////////////////////////////
 
-    // const produtoRecuperado: Produto | null = await produtoRepo.recuperarPorUuid("33663685-283d-4a52-b86e-7463e7077b38");
+    //const produtoRecuperado: Produto | null = await produtoRepo.recuperarPorUuid("7f35c7f4-ce26-4503-bfce-0afd937adfb8");
 
-    // console.log(produtoRecuperado);
+    //console.log(produtoRecuperado);
+
+    //console.log(produtoRecuperado?.estaDeletado());
 
     ///////////////////
     //Inserir Produto//
     ///////////////////
 
-    // const categoria01: Categoria = Categoria.recuperar({
-    //     id: "c3d5de0a-15a6-47b6-a1be-e20a1123ef53",
-    //     nome: 'Sala'
-    // });    
+    /*
+    const categoria01: Categoria = Categoria.recuperar({
+        id: "34b051a9-ccb5-4c4c-a850-52f6cfb08da5",
+        nome: 'Sala'
+    });     
 
-    // const categoria02: Categoria = Categoria.recuperar({
-    //     id: "33663685-283d-4a52-b86e-7463e7077b38",
-    //     nome: 'Banho'
-    // });
+    const categoria02: Categoria = Categoria.recuperar({
+        id: "73d77a06-9a29-4f91-8f7d-c7158fb13a6a",
+        nome: 'Quarto'
+    })
 
-    // const produto: Produto = Produto.criar({
-    //     nome:'Toalha de mesa',
-    //     descricao:'toalha de algodão',
-    //     valor:40,
-    //     categorias:[categoria01,categoria02]
-    //  });
+    const produto: Produto = Produto.criar({
+        nome:'Toalha de Cozinha',
+        descricao:'toalha de algodão',
+        valor:85,
+        categorias:[categoria01, categoria02]
+    });
 
-    // const produtoInserido = await produtoRepo.inserir(produto);
+    const produtoInserido = await produtoRepo.inserir(produto);
 
-    // console.log(produtoInserido);
+    console.log(produtoInserido);
 
+    */
 
+    /////////////////////////////////////////////////
+    //Recuperar Todos os Produtos e Suas Categorias//
+    /////////////////////////////////////////////////
 
+    const todosProdutos: Array<Produto> = await produtoRepo.recuperarTodos();
 
-    /////////Deletar Produto//////// 
-    //  const produtoDeletado : boolean = await produtoRepo.deletar ('9a9a4631-124c-4c4c-9f24-7bd0d3a4d81c')
-    //  console.log(produtoDeletado);
+    console.log(todosProdutos);
 
-    /////Recuperar produto///
+    ///////////////////////////////////////////////
+    //Atualizar Produto - Sem Atulizar Categorias//
+    ///////////////////////////////////////////////
 
-    // const todosProdutos: Array<Produto> = await produtoRepo.recuperarTodos();
+    /*
+    const produto = {
+        id: "7d6a14d5-02f3-4b6d-8cb8-8601ff151f10",
+        nome: "Toalha de Cozinha",
+        descricao: "toalha de algodão",
+        valor: 200
+    }; 
 
-    // console.log(todosProdutos);
+    const atualizouProduto: boolean = await produtoRepo.atualizar(produto.id,produto);
+    
+    */
+    ///////////////////
+    //Deletar Produto//
+    ///////////////////
+
+    //const produtoDeletado: boolean = await produtoRepo.deletar("7d6a14d5-02f3-4b6d-8cb8-8601ff151f10");
+
+    //console.log(produtoDeletado);
 
 }
 

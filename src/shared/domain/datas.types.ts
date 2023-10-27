@@ -6,5 +6,4 @@ interface IDatasControle {
 
 type KeysDatasControle = keyof IDatasControle;
 
-
 export { IDatasControle, KeysDatasControle }

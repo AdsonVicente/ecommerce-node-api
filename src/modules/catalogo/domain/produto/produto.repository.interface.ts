@@ -5,8 +5,8 @@ import { StatusProduto } from "./produto.types";
 
 interface IProdutoRepository<T> extends IRepository<T> {
 
-    adicionarCategoria(produto: Produto, categoria: Categoria): Promise<boolean>;
-    removerCategoria(produto: Produto, categoria: Categoria): Promise<boolean>;
+    adicionarCategoria(produto:Produto, categoria: Categoria): Promise<boolean>;
+    removerCategoria(produto:Produto, categoria: Categoria): Promise<boolean>;
     alterarStatus(produto: Produto, status: StatusProduto): Promise<boolean>;
     recuperarPorCategoria(idCategoria: string): Promise<Produto[]>;
 
