@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="ehvUv0xJiv6CY3YclSAE" name="Arquitetura em Camadas">
-        <mxGraphModel dx="394" dy="819" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="789" dy="728" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -89,11 +89,11 @@
                 </mxCell>
                 <mxCell id="54" value="" style="curved=1;endArrow=classic;html=1;strokeColor=#3333FF;strokeWidth=2;fontColor=#191616;" parent="1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="455" y="260" as="sourcePoint"/>
-                        <mxPoint x="445" y="250" as="targetPoint"/>
+                        <mxPoint x="460" y="260" as="sourcePoint"/>
+                        <mxPoint x="450" y="250" as="targetPoint"/>
                         <Array as="points">
-                            <mxPoint x="465" y="450"/>
-                            <mxPoint x="455" y="780"/>
+                            <mxPoint x="470" y="450"/>
+                            <mxPoint x="460" y="780"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
@@ -175,11 +175,14 @@
                 <mxCell id="98" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeColor=#3333FF;rotation=90;strokeWidth=2;" parent="1" vertex="1">
                     <mxGeometry x="687.5" y="590" width="40" height="60" as="geometry"/>
                 </mxCell>
+                <mxCell id="z6xJOH2f-OfCL0dnRmAU-98" value="Médio Nivel de Abstração / Orquestração" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="225" y="410" width="225" height="30" as="geometry"/>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram name="Arquitetura Hexagonal" id="RaXjF2fW67_FS4LBotdt">
-        <mxGraphModel dx="394" dy="819" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="671" dy="619" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="YTZjs5NrMnTZmiXK4MOZ-0"/>
                 <mxCell id="YTZjs5NrMnTZmiXK4MOZ-1" parent="YTZjs5NrMnTZmiXK4MOZ-0"/>
