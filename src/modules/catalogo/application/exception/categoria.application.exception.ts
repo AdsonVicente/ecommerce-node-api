@@ -1,7 +1,7 @@
-import { ApplicationException } from "@shared/application/application.exception";   
+import { ApplicationException } from "@shared/application/application.exception";
 
 class CategoriaApplicationException extends ApplicationException {
-    constructor(message:string = '⚠️ Exceção de Aplicação Genérica da Entidade Categoria') {
+    constructor(message: string = '⚠️ Exceção de Aplicação Genérica da Entidade Categoria') {
         super(message);
         this.name = 'CategoriaApplicationException'
         this.message = message;
@@ -9,7 +9,7 @@ class CategoriaApplicationException extends ApplicationException {
 }
 
 class CategoriaNaoEncontrada extends CategoriaApplicationException {
-    public constructor(message:string = '⚠️ A categoria não foi encontrada na base de dados.') {
+    public constructor(message: string = '⚠️ A categoria não foi encontrada na base de dados.') {
         super(message);
         this.name = 'CategoriaNaoEncontrada'
         this.message = message;

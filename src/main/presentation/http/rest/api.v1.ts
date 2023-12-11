@@ -5,29 +5,30 @@ const apiv1Router: Router = express.Router();
 
 apiv1Router.use(
     '/categorias',
-   categoriaRouter
+    categoriaRouter
 );
 
 apiv1Router.use(
     '/produtos',
     function (request, response, next) {
-        response.json({"entidade":"usuarios"});
-    }  
+        response.json({ "entidade": "usuarios" });
+    }
 );
 
 apiv1Router.use(
     '/usuarios',
     function (request, response, next) {
-        response.json({"entidade":"Pedidos"});
-    }  
+        response.json({ "entidade": "Pedidos" });
+    }
 );
 
 apiv1Router.use(
     '/pedidos',
     function (request, response, next) {
-        response.json({"entidade":"Produtos"});
-    }  
+        response.json({ "entidade": "Produtos" });
+    }
 );
+
 apiv1Router.use(
     '/categorias',
     categoriaRouter
