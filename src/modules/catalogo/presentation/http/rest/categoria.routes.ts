@@ -1,6 +1,7 @@
 import express from 'express';
 import { inserirCategoriaController, recuperarCategoriaPorIdController, recuperarTodasCategoriasController, atualizarCategoriaController, deletarCategoriaController } from './controllers';
-import { contentTypeMiddleware } from '@main/presentation/http/rest/middlewares/content-type.middlewares.';
+import { contentTypeMiddleware } from '@main/presentation/http/middlewares/content-type.middlewares.';
+import { validaInputInserirCategoria } from '../middlewares/valida-input-inserir-categoria.middlewares';
 
 
 const categoriaRouter = express.Router();
@@ -18,6 +19,7 @@ categoriaRouter.get(
 categoriaRouter.post(
     '/',
     contentTypeMiddleware,
+    validaInputInserirCategoria,
     (request, response, next) => inserirCategoriaController.inserir(request, response, next)
 );
 
