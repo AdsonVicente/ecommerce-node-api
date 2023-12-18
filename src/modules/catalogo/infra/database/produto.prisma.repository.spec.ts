@@ -32,17 +32,17 @@ describe('Repositório Prisma: Produto', () => {
 
         //Preencendo as variáveis com dados em conformidade com as restrições da regra de negócio
         UUIDValido = faker.string.uuid(); // Retorna um UUID v4
-        nomeProdutoValido = faker.string.alpha({length:{min:5,max:50}});
-        descricaoProdutoValido = faker.string.alpha({length:{min:10,max:200}});
-        valorProdutoValido = faker.number.int({min:1,max:2000 });
+        nomeProdutoValido = faker.string.alpha({ length: { min: 5, max: 50 } });
+        descricaoProdutoValido = faker.string.alpha({ length: { min: 10, max: 200 } });
+        valorProdutoValido = faker.number.int({ min: 1, max: 2000 });
         dataCriacaoProduto = faker.date.anytime();
         dataAtualizacaoProduto = faker.date.anytime();
         dataExclusaoProduto = faker.date.anytime();
         statusProduto = StatusProduto.ATIVO;
 
         //Criando categorias válidas com dados simulados
-        categoriaProduto01 = Categoria.criar({nome:faker.string.alpha({length:{min:3,max:50}})});
-        categoriaProduto02 = Categoria.criar({nome:faker.string.alpha({length:{min:3,max:50}})});
+        categoriaProduto01 = Categoria.criar({ nome: faker.string.alpha({ length: { min: 3, max: 50 } }) });
+        categoriaProduto02 = Categoria.criar({ nome: faker.string.alpha({ length: { min: 3, max: 50 } }) });
 
     });
 
@@ -71,12 +71,12 @@ describe('Repositório Prisma: Produto', () => {
                         dataCriacao: new Date(),
                         dataAtualizacao: new Date(),
                         categoria: {
-                          id: categoriaProduto01.id,
-                          nome: categoriaProduto01.nome,
-                          dataCriacao: new Date(),
-                          dataAtualizacao: new Date()
+                            id: categoriaProduto01.id,
+                            nome: categoriaProduto01.nome,
+                            dataCriacao: new Date(),
+                            dataAtualizacao: new Date()
                         }
-                     }
+                    }
                 ]
             };
 
@@ -85,7 +85,7 @@ describe('Repositório Prisma: Produto', () => {
             const produto: Produto = ProdutoMap.fromPrismaModelToDomain(produtoPrisma);
 
             const produtoRecuperado = await produtoRepositorio.recuperarPorUuid(produto.id);
-   
+
             expect(produtoRecuperado).toStrictEqual(produto)
             expect(prismaMock.produto.findUnique).toHaveBeenCalledTimes(1);
             expect(prismaMock.produto.findUnique).toBeCalledWith({
@@ -93,7 +93,7 @@ describe('Repositório Prisma: Produto', () => {
                     id: produto.id,
                 },
                 include: produtoIncludeCategoriaPrisma
-            });    
+            });
 
 
         });

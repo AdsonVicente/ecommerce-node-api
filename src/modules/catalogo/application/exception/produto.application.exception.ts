@@ -1,7 +1,7 @@
 import { ApplicationException } from "@shared/application/application.exception";
 
 class ProdutoApplicationException extends ApplicationException {
-    constructor(message:string = '⚠️ Exceção de Aplicação Genérica da Entidade Produto') {
+    constructor(message: string = '⚠️ Exceção de Aplicação Genérica da Entidade Produto') {
         super(message);
         this.name = 'ProdutoApplicationException'
         this.message = message;
@@ -9,7 +9,7 @@ class ProdutoApplicationException extends ApplicationException {
 }
 
 class ProdutoNaoEncontrado extends ProdutoApplicationException {
-    public constructor(message:string = '⚠️ o produto não foi encontrado na base de dados.') {
+    public constructor(message: string = '⚠️ o produto não foi encontrado na base de dados.') {
         super(message);
         this.name = 'ProdutoNaoEncontrado'
         this.message = message;

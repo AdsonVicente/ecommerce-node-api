@@ -38,7 +38,7 @@ class Categoria extends Entity<ICategoria> implements ICategoria {
             throw new NomeCategoriaTamanhoMinimoInvalido();
         }
 
-        if (tamanhoNome> Categoria.TAMANHO_MAXIMO_NOME) {
+        if (tamanhoNome > Categoria.TAMANHO_MAXIMO_NOME) {
             throw new NomeCategoriaTamanhoMaximoInvalido();
         }
 

@@ -35,9 +35,9 @@ async function main() {
     //Inserir Categoria//
     /////////////////////
    
-    console.log(await inserirCategoriaUseCase.execute({
-       nome:'Cozinha'
-    }));
+    //console.log(await inserirCategoriaUseCase.execute({
+    //    nome:'Cozinha'
+    //}));
 
     ///////////////////////s
     //Atualizar Categoria//
@@ -63,20 +63,20 @@ async function main() {
     ///////////////////
     //Inserir Produto//
     ///////////////////
-    /*
+    
    
     const categoria01: Categoria = Categoria.recuperar({
-        id: "03f890b0-684a-44ba-a887-170e26bb2cd2",
+        id: "28bc2b85-6286-4b39-a614-497ff61c39c9",
         nome: 'Cozinha'
     });    
 
-    const categoria02: Categoria = Categoria.recuperar({
-        id: "fc762da1-8d2c-4ffa-9559-901db94cb92e",
-        nome: 'Banho'
-    })
+    // const categoria02: Categoria = Categoria.recuperar({
+    //     id: "90736175-4f69-4fb5-9ea8-7a902d4dbd35",
+    //     nome: 'Banho'
+    // })
 
     const produto: Produto = Produto.criar({
-        nome:'Pano de Pratro',
+        nome:'Pano de Prato',
         descricao:'Algodão fio 60',
         valor:30,
         categorias:[categoria01]
@@ -85,7 +85,7 @@ async function main() {
     const produtoInserido = await produtoRepo.inserir(produto);
 
     console.log(produtoInserido);
-    */
+    
 
    
 
