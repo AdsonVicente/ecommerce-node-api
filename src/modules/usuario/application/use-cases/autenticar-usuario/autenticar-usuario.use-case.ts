@@ -4,18 +4,18 @@ import { CredenciaisUsuarioProps, IUsuario } from "@modules/usuario/domain/usuar
 import { UsuarioMap } from "@modules/usuario/infra/mappers/usuario.maps";
 import { IUseCase } from "@shared/application/use-case.interface";
 
-class AutenticarUsuarioUseCase implements IUseCase<CredenciaisUsuarioProps,IUsuario> {
+class AutenticarUsuarioUseCase implements IUseCase<CredenciaisUsuarioProps, IUsuario> {
     private _usuarioRepositorio: IUsuarioRepository<Usuario>;
 
-    constructor(repositorio: IUsuarioRepository<Usuario>){
+    constructor(repositorio: IUsuarioRepository<Usuario>) {
         this._usuarioRepositorio = repositorio;
     }
 
     async execute(credenciais: CredenciaisUsuarioProps): Promise<IUsuario> {
-       
+
         const usuario: Usuario | null = await this._usuarioRepositorio.recuperarPorEmail(credenciais.email);
 
-        if (!usuario){
+        if (!usuario) {
             throw new Error('Usuário Inexistente');  //futuramente uma execção de aplicação específica
         }
 
